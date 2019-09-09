@@ -25,5 +25,33 @@
     </dict>
 </dict>
 
+<dict>
+    <key>name</key>
+    <string>twelveHour</string>
+
+    <key>label</key>
+    <string>Enable 12h Clock</string>
+
+    <key>type</key>
+    <string>switch</string>
+
+    <key>default</key>
+    <false/>
+</dict>
+
+<dict>
+    <key>name</key>
+    <string>includeSeconds</string>
+
+    <key>label</key>
+    <string>Enable Seconds</string>
+
+    <key>type</key>
+    <string>switch</string>
+
+    <key>default</key>
+    <true/>
+</dict>
+
 </array>
 </plist>
