@@ -1,0 +1,17 @@
+Package: com.pulse0ne.flipclock
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: pulse0ne <snedigart@gmail.com>
+Filename: ./debs/com.pulse0ne.flipclock-1.0.0.deb
+Size: 32952
+MD5sum: c3de292bf228ff1386990e8c104cd824
+SHA1: 0660877c4c1ad6512213ddca2ec4613d6cddbb53
+SHA256: 956becb8705f1867751704ec3cad31fc65fcd38b78e947d093c9c3554539da10
+Section: Lockscreen Widgets
+Description: Flip Clock widget for Xen HTML
+Author: pulse0ne
+Depiction: https://pulse0ne.github.io/depictions/?p=com.pulse0ne.flipclock
+Icon: https://pulse0ne.github.io/depictions/sectionIcons/LS.png
+Name: FlipClock
+Sileodepiction: https://pulse0ne.github.io/sileo/flipclock.json
+
