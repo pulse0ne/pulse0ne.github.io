@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    src: url(assets/Oswald-Bold.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.col, .row {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flip-clock {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.combined-card {
+    display: block;
+    position: relative;
+    width: 140px;
+    height: 120px;
+    -webkit-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0px 10px 10px -10px grey;
+}
+
+.upper-card, .lower-card {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    border: 1px solid whitesmoke;
+}
+
+.upper-card span, .lower-card span {
+    font-size: 5em;
+    font-family: 'Oswald', monospace;
+    font-weight: bold;
+    color: #333333;
+}
+
+.upper-card {
+    align-items: flex-end;
+    border-bottom: 0.5px solid whitesmoke;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.upper-card span {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+}
+
+.lower-card {
+    align-items: flex-start;
+    border-top: 0.5px solid whitesmoke;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.lower-card span {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.flip-card {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card span {
+    font-family: 'Oswald', monospace;
+    font-size: 5em;
+    font-weight: bold;
+    color: #333333;
+}
+
+.flip-card.unfold {
+    top: 50%;
+    align-items: flex-start;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    background-color: white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 0.5px solid whitesmoke;
+    border-top: 0.5px solid whitesmoke;
+}
+
+.flip-card.unfold span {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.flip-card.fold {
+    top: 0%;
+    align-items: flex-end;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    background-color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border: 0.5px solid whitesmoke;
+    border-bottom: 0.5px solid whitesmoke;
+}
+
+.flip-card.fold span {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+}
+
+.fold {
+    -webkit-animation: fold 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+    animation: fold 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.unfold {
+    -webkit-animation: unfold 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+    animation: unfold 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+@-webkit-keyframes fold {
+    0% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
+    }
+}
+
+@keyframes fold {
+    0% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
+    }
+}
+
+@-webkit-keyframes unfold {
+    0% {
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes unfold {
+    0% {
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+}
