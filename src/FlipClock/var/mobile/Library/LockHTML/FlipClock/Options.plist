@@ -53,5 +53,19 @@
     <true/>
 </dict>
 
+<dict>
+    <key>name</key>
+    <string>gutterWidth</string>
+    
+    <key>label</key>
+    <string>Gutter Width (px)</string>
+
+    <key>type</key>
+    <string>edit</string>
+    
+    <key>defualt</key>
+    <integer>24</integer>
+</dict>
+
 </array>
 </plist>

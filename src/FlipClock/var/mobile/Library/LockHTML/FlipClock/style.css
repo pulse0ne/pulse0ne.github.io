@@ -32,8 +32,8 @@
 
 .flip-clock {
     display: flex;
-    justify-content: space-between;
-    width: 500px;
+    justify-content: center;
+    width: 100%;
 }
 
 .combined-card {

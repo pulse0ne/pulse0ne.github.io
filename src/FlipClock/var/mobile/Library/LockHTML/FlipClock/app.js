@@ -1,25 +1,49 @@
 const animatedCard = {
-    props: ['animation', 'digit'],
-    template: /*html*/`<div class="flip-card" :class="animation"><span>{{ digit }}</span></div>`
+    props: ['animation', 'digit', 'colorMode'],
+    template: /*html*/`<div class="flip-card" :class="animation" :style="bgStyle"><span :style="fgStyle">{{ digit }}</span></div>`,
+    computed: {
+        fgStyle() {
+            return {
+                color: this.colorMode === 'dark' ? '#fefefe' : '#333333'
+            };
+        },
+        bgStyle() {
+            return {
+                background: this.colorMode === 'dark' ? '#333333' : '#fefefe'
+            };
+        }
+    }
 };
 
 const staticCard = {
-    props: ['position', 'digit'],
-    template: /*html*/`<div :class="position"><span>{{ digit }}</span></div>`
+    props: ['position', 'digit', 'colorMode'],
+    template: /*html*/`<div :class="position" :style="bgStyle"><span :style="fgStyle">{{ digit }}</span></div>`,
+    computed: {
+        fgStyle() {
+            return {
+                color: this.colorMode === 'dark' ? '#fefefe' : '#333333'
+            };
+        },
+        bgStyle() {
+            return {
+                background: this.colorMode === 'dark' ? '#333333' : '#fefefe'
+            };
+        }
+    }
 };
 
 const combinedCard = {
-    props: ['digit', 'shuffle', 'unit'],
+    props: ['digit', 'shuffle', 'unit', 'colorMode'],
     components: {
         'animated-card': animatedCard,
         'static-card': staticCard
     },
     template: /*html*/`
     <div class="combined-card">
-        <static-card position="upper-card" :digit="current"></static-card>
-        <static-card position="lower-card" :digit="previous"></static-card>
-        <animated-card :animation="animation1" :digit="digit1"></animated-card>
-        <animated-card :animation="animation2" :digit="digit2"></animated-card>
+        <static-card position="upper-card" :digit="current" :color-mode="colorMode"></static-card>
+        <static-card position="lower-card" :digit="previous" :color-mode="colorMode"></static-card>
+        <animated-card :animation="animation1" :digit="digit1" :color-mode="colorMode"></animated-card>
+        <animated-card :animation="animation2" :digit="digit2" :color-mode="colorMode"></animated-card>
     </div>`,
     computed: {
         current() {
@@ -52,10 +76,10 @@ const combinedCard = {
 
 const template = /*html*/`
 <div class="flip-clock">
-    <combined-card unit="hours" :digit="hours" :shuffle="hoursShuffle"></combined-card>
-    <combined-card unit="minutes" :digit="minutes" :shuffle="minutesShuffle"></combined-card>
-    <combined-card unit="seconds" :digit="seconds" :shuffle="secondsShuffle" v-if="includeSeconds"></combined-card>
-    {{ twelveHour}} - {{ includeSeconds }} - {{ colorMode }}
+    <combined-card unit="hours" :digit="hours" :shuffle="hoursShuffle" :color-mode="colorMode" :style="cardStyle('hours')"></combined-card>
+    <combined-card unit="minutes" :digit="minutes" :shuffle="minutesShuffle" :color-mode="colorMode" :style="cardStyle('minutes')"></combined-card>
+    <combined-card unit="seconds" :digit="seconds" :shuffle="secondsShuffle" :color-mode="colorMode" v-if="includeSeconds"></combined-card>
+    <small>{{ twelveHour}}<br/>{{ includeSeconds }}<br/>{{ colorMode }}</small>
 </div>`;
 
 const app = {
@@ -72,7 +96,8 @@ const app = {
             timerId: null,
             colorMode: window.colorMode || 'dark',
             twelveHour: window.twelveHour === undefined ? false : window.twelveHour,
-            includeSeconds: window.includeSeconds === undefined ? true : window.includeSeconds
+            includeSeconds: window.includeSeconds === undefined ? true : window.includeSeconds,
+            gutterWidth: window.gutterWidth === undefined ? 24 : window.gutterWidth
         };
     },
     created() {
@@ -101,13 +126,18 @@ const app = {
                 this.seconds = seconds;
                 this.secondsShuffle = !this.secondsShuffle;
             }
+        },
+        cardStyle(unit) {
+            return {
+                'margin-right': unit !== 'minutes' || this.includeSeconds ? `${this.gutterWidth}px` : 0 
+            };
         }
     }
 };
 
 /* uncomment for testing off-platform */
 // window.includeSeconds = false;
-// window.colorMode = 'light';
-// window.twelveHour = true;
+window.colorMode = 'dark';
+window.twelveHour = true;
 
 new Vue({ render: h => h(app) }).$mount('#app');
