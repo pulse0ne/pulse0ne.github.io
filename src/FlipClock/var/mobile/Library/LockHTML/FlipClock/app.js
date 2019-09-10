@@ -54,7 +54,8 @@ const template = /*html*/`
 <div class="flip-clock">
     <combined-card unit="hours" :digit="hours" :shuffle="hoursShuffle"></combined-card>
     <combined-card unit="minutes" :digit="minutes" :shuffle="minutesShuffle"></combined-card>
-    <combined-card unit="seconds" :digit="seconds" :shuffle="secondsShuffle"></combined-card>
+    <combined-card unit="seconds" :digit="seconds" :shuffle="secondsShuffle" v-if="includeSeconds"></combined-card>
+    {{ twelveHour}} - {{ includeSeconds }} - {{ colorMode }}
 </div>`;
 
 const app = {
@@ -68,7 +69,10 @@ const app = {
             hoursShuffle: true,
             minutesShuffle: true,
             secondsShuffle: true,
-            timerId: null
+            timerId: null,
+            colorMode: window.colorMode || 'dark',
+            twelveHour: window.twelveHour === undefined ? false : window.twelveHour,
+            includeSeconds: window.includeSeconds === undefined ? true : window.includeSeconds
         };
     },
     created() {
@@ -100,4 +104,10 @@ const app = {
         }
     }
 };
+
+/* uncomment for testing off-platform */
+// window.includeSeconds = false;
+// window.colorMode = 'light';
+// window.twelveHour = true;
+
 new Vue({ render: h => h(app) }).$mount('#app');
