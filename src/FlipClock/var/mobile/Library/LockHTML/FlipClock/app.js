@@ -79,7 +79,6 @@ const template = /*html*/`
     <combined-card unit="hours" :digit="hours" :shuffle="hoursShuffle" :color-mode="colorMode" :style="cardStyle('hours')"></combined-card>
     <combined-card unit="minutes" :digit="minutes" :shuffle="minutesShuffle" :color-mode="colorMode" :style="cardStyle('minutes')"></combined-card>
     <combined-card unit="seconds" :digit="seconds" :shuffle="secondsShuffle" :color-mode="colorMode" v-if="includeSeconds"></combined-card>
-    <small>{{ twelveHour}}<br/>{{ includeSeconds }}<br/>{{ colorMode }}</small>
 </div>`;
 
 const app = {
@@ -111,18 +110,21 @@ const app = {
     methods: {
         updateTime() {
             const time = new Date();
-            const hours = time.getHours();
+            let hours = time.getHours();
             const minutes = time.getMinutes();
             const seconds = time.getSeconds();
+            if (this.twelveHour && hours > 12) {
+                hours -= 12;
+            }
             if (hours !== this.hours) {
                 this.hours = hours;
                 this.hoursShuffle = !this.hoursShuffle;
             }
-            if (minutes != this.minutes) {
+            if (minutes !== this.minutes) {
                 this.minutes = minutes;
                 this.minutesShuffle = !this.minutesShuffle;
             }
-            if (seconds != this.seconds) {
+            if (seconds !== this.seconds) {
                 this.seconds = seconds;
                 this.secondsShuffle = !this.secondsShuffle;
             }
@@ -137,7 +139,9 @@ const app = {
 
 /* uncomment for testing off-platform */
 // window.includeSeconds = false;
-window.colorMode = 'dark';
-window.twelveHour = true;
+// window.colorMode = 'light';
+// window.twelveHour = true;
+// window.gutterWidth = 12;
+// window.scale = 5;
 
 new Vue({ render: h => h(app) }).$mount('#app');

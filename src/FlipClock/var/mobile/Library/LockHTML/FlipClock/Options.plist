@@ -1,71 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
+    <array>
 
-<dict>
-    <key>name</key>
-    <string>colorMode</string>
+        <dict>
+            <key>name</key>
+            <string>colorMode</string>
 
-    <key>label</key>
-    <string>Color Mode</string>
+            <key>label</key>
+            <string>Color Mode</string>
 
-    <key>type</key>
-    <string>select</string>
+            <key>type</key>
+            <string>select</string>
 
-    <key>default</key>
-    <string>Dark</string>
+            <key>default</key>
+            <string>Dark</string>
 
-    <key>options</key>
-    <dict>
-        <key>Dark</key>
-        <string>dark</string>
-        <key>Light</key>
-        <string>light</string>
-    </dict>
-</dict>
+            <key>options</key>
+            <dict>
+                <key>Dark</key>
+                <string>dark</string>
+                <key>Light</key>
+                <string>light</string>
+            </dict>
+        </dict>
 
-<dict>
-    <key>name</key>
-    <string>twelveHour</string>
+        <dict>
+            <key>name</key>
+            <string>twelveHour</string>
 
-    <key>label</key>
-    <string>Enable 12h Clock</string>
+            <key>label</key>
+            <string>Enable 12h Clock</string>
 
-    <key>type</key>
-    <string>switch</string>
+            <key>type</key>
+            <string>switch</string>
 
-    <key>default</key>
-    <false/>
-</dict>
+            <key>default</key>
+            <false/>
+        </dict>
 
-<dict>
-    <key>name</key>
-    <string>includeSeconds</string>
+        <dict>
+            <key>name</key>
+            <string>includeSeconds</string>
 
-    <key>label</key>
-    <string>Enable Seconds</string>
+            <key>label</key>
+            <string>Enable Seconds</string>
 
-    <key>type</key>
-    <string>switch</string>
+            <key>type</key>
+            <string>switch</string>
 
-    <key>default</key>
-    <true/>
-</dict>
+            <key>default</key>
+            <true/>
+        </dict>
 
-<dict>
-    <key>name</key>
-    <string>gutterWidth</string>
-    
-    <key>label</key>
-    <string>Gutter Width (px)</string>
+        <dict>
+            <key>name</key>
+            <string>gutterWidth</string>
 
-    <key>type</key>
-    <string>edit</string>
-    
-    <key>defualt</key>
-    <integer>24</integer>
-</dict>
+            <key>label</key>
+            <string>Gutter Width (px)</string>
 
-</array>
+            <key>type</key>
+            <string>edit</string>
+
+            <key>defualt</key>
+            <integer>24</integer>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>scale</string>
+
+            <key>label</key>
+            <string>Widget Size</string>
+
+            <key>type</key>
+            <string>edit</string>
+
+            <key>default</key>
+            <integer>10</integer>
+        </dict>
+    </array>
 </plist>

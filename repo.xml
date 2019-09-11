@@ -1,19 +1,19 @@
 <repo>
-	<footerlinks>
-		<link>
-			<name>Find me on Github</name>
-			<url>https://github.com/pulse0ne</url>
-			<iconclass>fa fa-github</iconclass>
-		</link>
-		<link>
-			<name>Send me an email</name>
-			<url>mailto:snedigart@gmail.com</url>
-			<iconclass>fa fa-envelope</iconclass>
-		</link>
-		<link>
-	    <name>Buy me a coffee/beer</name>
-	    <url>https://www.paypal.me/pulse0ne</url>
-			<iconclass>fa fa-paypal</iconclass>
-	  </link>
-	</footerlinks>
+    <footerlinks>
+        <link>
+            <name>Find me on Github</name>
+            <url>https://github.com/pulse0ne</url>
+            <iconclass>fa fa-github</iconclass>
+        </link>
+        <link>
+            <name>Send me an email</name>
+            <url>mailto:snedigart@gmail.com</url>
+            <iconclass>fa fa-envelope</iconclass>
+        </link>
+        <link>
+            <name>Buy me a coffee/beer</name>
+            <url>https://www.paypal.me/pulse0ne</url>
+            <iconclass>fa fa-paypal</iconclass>
+        </link>
+    </footerlinks>
 </repo>
