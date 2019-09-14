@@ -37,10 +37,10 @@ Version: 1.0.0
 Architecture: iphoneos-arm
 Maintainer: pulse0ne <snedigart@gmail.com>
 Filename: ./debs/com.pulse0ne.wordclock-1.0.0.deb
-Size: 53632
-MD5sum: c2908d87b0d721f83e70c4b9abfbc25a
-SHA1: 814db3e9d9b2e695ce10f65dff134b26b3cc678e
-SHA256: aee7389d6dd0afd2a9fd33272c42aa11d3f84ebcae07fa91d8928833d7f2b060
+Size: 53670
+MD5sum: 888cf43f29979b68c444e9f7afcc89ee
+SHA1: 44d9e5bbb6f1c6d59121324805689d36bfac2789
+SHA256: a840e50df76e944556b877b7a64d1fad4370847e49a5e07cacbe366504b92f1c
 Section: Lockscreen Widgets
 Description: Word Clock widget for Xen HTML
 Author: pulse0ne

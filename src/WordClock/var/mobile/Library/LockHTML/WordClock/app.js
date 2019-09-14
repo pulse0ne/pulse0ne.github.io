@@ -7,7 +7,8 @@
 const opts = {
     onColor: window.onColor || '#1e90ff',
     offColor: window.offColor || '#d3d3d3',
-    glowEffect: window.glowEffect === undefined ? true : window.glowEffect
+    glowEffect: window.glowEffect === undefined ? true : window.glowEffect,
+    blurRadius: window.blurRadius || 8
 };
 
 const glyph = {
@@ -17,7 +18,7 @@ const glyph = {
         glyphStyle() {
             return {
                 color: this.on ? opts.onColor : opts.offColor,
-                textShadow: this.on && opts.glowEffect ? `0 0 8px ${opts.onColor}` : null
+                textShadow: this.on && opts.glowEffect ? `0 0 ${opts.blurRadius}px ${opts.onColor}` : null
             };
         }
     }
