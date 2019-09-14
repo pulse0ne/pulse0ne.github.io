@@ -22,7 +22,7 @@ const glyph = {
             return {
                 color: this.on ? opts.onColor : opts.offColor,
                 textShadow: this.on && opts.glowEffect ? `0 0 ${opts.blurRadius}px ${opts.onColor}` : null,
-                opacity: `${!this.on ? opts.offOpacity : 100}%`
+                opacity: !this.on ? opts.offOpacity / 100 : 1.0
             };
         }
     }
