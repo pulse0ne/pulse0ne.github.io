@@ -3,10 +3,10 @@ Version: 1.0.0
 Architecture: iphoneos-arm
 Maintainer: pulse0ne <snedigart@gmail.com>
 Filename: ./debs/com.pulse0ne.blurlayer-1.0.0.deb
-Size: 1546
-MD5sum: ed1f00c3ba332a8135d5885edca7ae6c
-SHA1: 6532730040c34641207f4b8fe5d1b93cf0cc5f0b
-SHA256: 554db4bde1f52a5be31fa2ce43b620d7bc2b869dadf00e520203fdd4809a8578
+Size: 1576
+MD5sum: 8aab6c59e8c5d9f3a184e3886a93c573
+SHA1: cb7aef377ffda2a2d04756c9f682917a99c3e72f
+SHA256: 4a1aa7437f7507b445ca1bacd1ef4107edae86cec528a7c228c8803b7081d2b9
 Section: Lockscreen Widgets
 Description: General purpose backround blurring layer for XenHTML
 Author: pulse0ne
