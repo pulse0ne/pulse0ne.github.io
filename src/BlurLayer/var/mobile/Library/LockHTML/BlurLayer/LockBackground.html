@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BlurLayer</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+<div id="layer"></div>
+<script type="text/javascript">
+    const el = document.getElementById('layer');
+    el.style.width = `${window.layerWidth || 100}%`;
+    el.style.height = `${window.layerHeight || 100}%`;
+    el.style.webkitBackdropFilter = `blur(${window.blurAmount || 4}px)`;
+</script>
+</body>
+
+</html>

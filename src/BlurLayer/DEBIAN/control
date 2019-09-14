@@ -1,0 +1,11 @@
+Package: com.pulse0ne.blurlayer
+Name: BlurLayer
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: General purpose backround blurring layer for XenHTML
+Depiction: https://pulse0ne.github.io/depictions/?p=com.pulse0ne.blurlayer
+SileoDepiction: https://pulse0ne.github.io/sileo/blurlayer.json
+Icon: https://pulse0ne.github.io/depictions/sectionIcons/LS.png
+Author: pulse0ne
+Maintainer: pulse0ne <snedigart@gmail.com>
+Section: Lockscreen Widgets

@@ -1,3 +1,20 @@
+Package: com.pulse0ne.blurlayer
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: pulse0ne <snedigart@gmail.com>
+Filename: ./debs/com.pulse0ne.blurlayer-1.0.0.deb
+Size: 1546
+MD5sum: ed1f00c3ba332a8135d5885edca7ae6c
+SHA1: 6532730040c34641207f4b8fe5d1b93cf0cc5f0b
+SHA256: 554db4bde1f52a5be31fa2ce43b620d7bc2b869dadf00e520203fdd4809a8578
+Section: Lockscreen Widgets
+Description: General purpose backround blurring layer for XenHTML
+Author: pulse0ne
+Depiction: https://pulse0ne.github.io/depictions/?p=com.pulse0ne.blurlayer
+Icon: https://pulse0ne.github.io/depictions/sectionIcons/LS.png
+Name: BlurLayer
+Sileodepiction: https://pulse0ne.github.io/sileo/blurlayer.json
+
 Package: com.pulse0ne.flipclock
 Version: 1.0.0
 Architecture: iphoneos-arm
