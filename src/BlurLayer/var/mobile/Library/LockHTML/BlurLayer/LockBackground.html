@@ -5,15 +5,16 @@
     <title>BlurLayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>body, html { height: 100%; width: 100%; margin: 0; padding: 0; }</style>
 </head>
 
-<body>
+<body style="width: 100%; height: 100%;">
 <div id="layer"></div>
 <script type="text/javascript">
     const el = document.getElementById('layer');
     const q = window;
     const [w, h, f] = [q.layerWidth || 100, q.layerHeight || 100, q.blurAmount || 4];
-    el.style = `width: ${w}%; height: ${h}%; -webkit-backdrop-filter: blur(${f}px);`;
+    el.style = `width: ${w}%; height: ${h}%; -webkit-backdrop-filter: blur(${f}px); backdrop-filter: blur(${f}px);`;
 </script>
 </body>
 
