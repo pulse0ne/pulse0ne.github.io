@@ -2,13 +2,16 @@
 // window.onColor = '#ff7844';
 // window.offColor = '#e0e0e0';
 // window.glowEffect = false;
+// window.blurRadius = 20;
+// window.offOpacity = 0;
 // window.scale = 8;
 
 const opts = {
     onColor: window.onColor || '#1e90ff',
     offColor: window.offColor || '#d3d3d3',
     glowEffect: window.glowEffect === undefined ? true : window.glowEffect,
-    blurRadius: window.blurRadius || 8
+    blurRadius: window.blurRadius || 8,
+    offOpacity: window.offOpacity === undefined ? 50 : window.offOpacity
 };
 
 const glyph = {
@@ -18,7 +21,8 @@ const glyph = {
         glyphStyle() {
             return {
                 color: this.on ? opts.onColor : opts.offColor,
-                textShadow: this.on && opts.glowEffect ? `0 0 ${opts.blurRadius}px ${opts.onColor}` : null
+                textShadow: this.on && opts.glowEffect ? `0 0 ${opts.blurRadius}px ${opts.onColor}` : null,
+                opacity: `${!this.on ? opts.offOpacity : 100}%`
             };
         }
     }
@@ -234,9 +238,6 @@ const grid = {
         m() {
             return this.time.getMinutes();
         }
-    },
-    updated() {
-        console.log('updated');
     },
     methods: {
         clearValues() {

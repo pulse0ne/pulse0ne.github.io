@@ -33,6 +33,20 @@
 
         <dict>
             <key>name</key>
+            <string>offOpacity</string>
+
+            <key>label</key>
+            <string>"Off" Opacity</string>
+
+            <key>type</key>
+            <string>edit</string>
+
+            <key>default</key>
+            <integer>50</integer>
+        </dict>
+
+        <dict>
+            <key>name</key>
             <string>glowEffect</string>
 
             <key>label</key>
