@@ -11,9 +11,9 @@
 <div id="layer"></div>
 <script type="text/javascript">
     const el = document.getElementById('layer');
-    el.style.width = `${window.layerWidth || 100}%`;
-    el.style.height = `${window.layerHeight || 100}%`;
-    el.style.webkitBackdropFilter = `blur(${window.blurAmount || 4}px)`;
+    const q = window;
+    const [w, h, f] = [q.layerWidth || 100, q.layerHeight || 100, q.blurAmount || 4];
+    el.style = `width: ${w}%; height: ${h}%; -webkit-backdrop-filter: blur(${f}px);`;
 </script>
 </body>
 
