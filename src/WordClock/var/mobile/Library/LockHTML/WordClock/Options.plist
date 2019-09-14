@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+
+        <dict>
+            <key>name</key>
+            <string>onColor</string>
+
+            <key>label</key>
+            <string>"On" Color</string>
+
+            <key>type</key>
+            <string>edit</string>
+
+            <key>default</key>
+            <string>#1e90ff</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>offColor</string>
+
+            <key>label</key>
+            <string>"Off" Color</string>
+
+            <key>type</key>
+            <string>edit</string>
+
+            <key>default</key>
+            <string>#d3d3d3</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>glowEffect</string>
+
+            <key>label</key>
+            <string>Glow Effect</string>
+
+            <key>type</key>
+            <string>switch</string>
+
+            <key>default</key>
+            <true/>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>scale</string>
+
+            <key>label</key>
+            <string>Widget Size</string>
+
+            <key>type</key>
+            <string>edit</string>
+
+            <key>default</key>
+            <integer>10</integer>
+        </dict>
+    </array>
+</plist>

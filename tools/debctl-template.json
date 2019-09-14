@@ -1,0 +1,13 @@
+{
+    "Package": "<pkg>",
+    "Name": "<name>",
+    "Version": "1.0.0",
+    "Architecture": "iphoneos-arm",
+    "Description": "<desc>",
+    "Depiction": "https://pulse0ne.github.io/depections/?p=<pkg>",
+    "SileoDepiction": "https://pulse0ne.github.io/sileo/<pkg-name>.json",
+    "Icon": "https://pulse0ne.github.io/depections/sectionIcons/<section-abbrev>.png",
+    "Author": "pulse0ne",
+    "Maintainer": "pulse0ne <snedigart@gmail.com>",
+    "Section": "<section>"
+}

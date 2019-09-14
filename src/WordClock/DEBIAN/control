@@ -1,0 +1,11 @@
+Package: com.pulse0ne.wordclock
+Name: WordClock
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Word Clock widget for Xen HTML
+Depiction: https://pulse0ne.github.io/depictions/?p=com.pulse0ne.wordclock
+SileoDepiction: https://pulse0ne.github.io/sileo/wordclock.json
+Icon: https://pulse0ne.github.io/depictions/sectionIcons/LS.png
+Author: pulse0ne
+Maintainer: pulse0ne <snedigart@gmail.com>
+Section: Lockscreen Widgets

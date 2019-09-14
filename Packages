@@ -15,3 +15,20 @@ Icon: https://pulse0ne.github.io/depictions/sectionIcons/LS.png
 Name: FlipClock
 Sileodepiction: https://pulse0ne.github.io/sileo/flipclock.json
 
+Package: com.pulse0ne.wordclock
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: pulse0ne <snedigart@gmail.com>
+Filename: ./debs/com.pulse0ne.wordclock-1.0.0.deb
+Size: 53632
+MD5sum: c2908d87b0d721f83e70c4b9abfbc25a
+SHA1: 814db3e9d9b2e695ce10f65dff134b26b3cc678e
+SHA256: aee7389d6dd0afd2a9fd33272c42aa11d3f84ebcae07fa91d8928833d7f2b060
+Section: Lockscreen Widgets
+Description: Word Clock widget for Xen HTML
+Author: pulse0ne
+Depiction: https://pulse0ne.github.io/depictions/?p=com.pulse0ne.wordclock
+Icon: https://pulse0ne.github.io/depictions/sectionIcons/LS.png
+Name: WordClock
+Sileodepiction: https://pulse0ne.github.io/sileo/wordclock.json
+
